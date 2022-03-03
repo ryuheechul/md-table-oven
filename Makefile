@@ -26,7 +26,7 @@ initialize-csv:
 .PHONY: csv-to-yaml
 csv-to-yaml:
 	cat $(csv-filename)
-	$(MAKE) .csv-to-yaml > $(yaml-filename)
+	$(MAKE) -s .csv-to-yaml > $(yaml-filename)
 	cat $(yaml-filename)
 
 .PHONY: .yaml-to-csv
@@ -37,7 +37,7 @@ csv-to-yaml:
 .PHONY: yaml-to-csv
 yaml-to-csv:
 	cat $(yaml-filename)
-	$(MAKE) .yaml-to-csv > $(csv-filename)
+	$(MAKE) -s .yaml-to-csv > $(csv-filename)
 	cat $(csv-filename)
 
 .PHONY: .yaml-to-md
@@ -47,7 +47,7 @@ yaml-to-csv:
 .PHONY: yaml-to-md
 yaml-to-md:
 	cat $(yaml-filename)
-	$(MAKE) .yaml-to-md > $(md-filename)
+	$(MAKE) -s .yaml-to-md > $(md-filename)
 	cat $(md-filename)
 
 .PHONY: .md-to-yaml
@@ -57,7 +57,7 @@ yaml-to-md:
 .PHONY: md-to-yaml
 md-to-yaml:
 	cat $(md-filename)
-	$(MAKE) .md-to-yaml > $(yaml-filename)
+	$(MAKE) -s .md-to-yaml > $(yaml-filename)
 	cat $(yaml-filename)
 
 .PHONY: csv-to-md
