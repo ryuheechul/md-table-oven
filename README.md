@@ -17,20 +17,13 @@ It's rather a starting point or a crafting room if you will.
 ## Tools
 > these are what [example](./example) use and you can use any other tool that suits your needs actually.
 
-- dasel
-https://github.com/TomWright/dasel
-- jq
-https://stedolan.github.io/jq/
-- yq
-https://mikefarah.gitbook.io/yq/
-- markdown-table-cli
-https://github.com/raine/markdown-table-cli
-- parse-markdown-table-cli
-https://www.npmjs.com/package/parse-markdown-table-cli
+- [dasel](https://github.com/TomWright/dasel)
+- [jq](https://stedolan.github.io/jq/)
+- [yq](https://mikefarah.gitbook.io/yq/)
+- [markdown-table-cli](https://github.com/raine/markdown-table-cli)
+- [parse-markdown-table-cli](https://www.npmjs.com/package/parse-markdown-table-cli)
 
-These should be installed if you use direnv + nix
-https://direnv.net/ 
-https://github.com/NixOS/nix
+These should gets installed if you use [direnv](https://direnv.net/) + [nix](https://github.com/NixOS/nix).
 
 ## Quick Look
 `make gen-md` will start from csv all the way to md
