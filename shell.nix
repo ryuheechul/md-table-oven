@@ -14,5 +14,7 @@ pkgs.mkShell {
     dasel
     node-pkg-markdown-table-cli
     node-pkg-parse-markdown-table-cli
+    bat
+    glow
   ];
 }
