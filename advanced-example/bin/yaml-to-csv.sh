@@ -1,1 +1,0 @@
-../../example/bin/yaml-to-csv.sh

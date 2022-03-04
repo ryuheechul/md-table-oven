@@ -2,7 +2,7 @@
 
 script_dir="$(dirname "$0")"
 
-to_run_sh="csv-to-yaml.sh"
+to_run_sh="yaml2md.sh"
 
 yours="${script_dir}/../yours/bin/${to_run_sh}"
 example="${script_dir}/../example/bin/${to_run_sh}"

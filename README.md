@@ -31,12 +31,12 @@ These should gets installed if you use [direnv](https://direnv.net/) + [nix](htt
 ### Others useful commands
 ```bash
 make initialize-csv
-make csv-to-yaml
-make yaml-to-csv
-make yaml-to-md
-make md-to-yaml
-make csv-to-md
-make md-to-csv
+make csv2yaml
+make yaml2csv
+make yaml2md
+make md2yaml
+make csv2md
+make md2csv
 ```
 
 These commands not only print results but also it saves to files in `out/` (by default)

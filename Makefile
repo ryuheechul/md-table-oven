@@ -8,7 +8,7 @@ view = bin/view.sh
 
 # fastest way to create markdown table
 .PHONY: gen-md
-gen-md: initialize-csv csv-to-md
+gen-md: initialize-csv csv2md
 
 .PHONY: .initialize-csv
 .initialize-csv:
@@ -20,51 +20,51 @@ initialize-csv:
 	bin/initialize-csv.sh > $(csv-filename)
 	$(view) $(csv-filename)
 
-.PHONY: .csv-to-yaml
-.csv-to-yaml:
-	@bin/csv-to-yaml.sh $(csv-filename)
+.PHONY: .csv2yaml
+.csv2yaml:
+	@bin/csv2yaml.sh $(csv-filename)
 
 # useful when you want to write in more human friendly way
-.PHONY: csv-to-yaml
-csv-to-yaml:
+.PHONY: csv2yaml
+csv2yaml:
 	$(view) $(csv-filename)
-	$(MAKE) -s .csv-to-yaml > $(yaml-filename)
+	$(MAKE) -s .csv2yaml > $(yaml-filename)
 	$(view) $(yaml-filename)
 
-.PHONY: .yaml-to-csv
-.yaml-to-csv:
-	@bin/yaml-to-csv.sh $(yaml-filename)
+.PHONY: .yaml2csv
+.yaml2csv:
+	@bin/yaml2csv.sh $(yaml-filename)
 
 # useful when you want to keep in more compact format
-.PHONY: yaml-to-csv
-yaml-to-csv:
+.PHONY: yaml2csv
+yaml2csv:
 	$(view) $(yaml-filename)
-	$(MAKE) -s .yaml-to-csv > $(csv-filename)
+	$(MAKE) -s .yaml2csv > $(csv-filename)
 	$(view) $(csv-filename)
 
-.PHONY: .yaml-to-md
-.yaml-to-md:
-	@bin/yaml-to-md.sh $(yaml-filename)
+.PHONY: .yaml2md
+.yaml2md:
+	@bin/yaml2md.sh $(yaml-filename)
 
-.PHONY: yaml-to-md
-yaml-to-md:
+.PHONY: yaml2md
+yaml2md:
 	$(view) $(yaml-filename)
-	$(MAKE) -s .yaml-to-md > $(md-filename)
+	$(MAKE) -s .yaml2md > $(md-filename)
 	$(view) $(md-filename)
 
-.PHONY: .md-to-yaml
-.md-to-yaml:
-	@bin/md-to-yaml.sh $(md-filename)
+.PHONY: .md2yaml
+.md2yaml:
+	@bin/md2yaml.sh $(md-filename)
 
-.PHONY: md-to-yaml
-md-to-yaml:
+.PHONY: md2yaml
+md2yaml:
 	$(view) $(md-filename)
-	$(MAKE) -s .md-to-yaml > $(yaml-filename)
+	$(MAKE) -s .md2yaml > $(yaml-filename)
 	$(view) $(yaml-filename)
 
-.PHONY: csv-to-md
-csv-to-md: csv-to-yaml yaml-to-md
+.PHONY: csv2md
+csv2md: csv2yaml yaml2md
 
-.PHONY: md-to-csv
-md-to-csv: md-to-yaml yaml-to-csv
+.PHONY: md2csv
+md2csv: md2yaml yaml2csv
 
