@@ -1,3 +1,3 @@
 .PHONY: diff
 diff:
-	diff ./bin ../example/bin
+	diff ./bin ../default/bin

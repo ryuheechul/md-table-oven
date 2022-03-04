@@ -1,6 +1,6 @@
 .PHONY: touch
 touch: clear
-	cp -r -L ../example/bin bin
+	cp -r -L ../default/bin bin
 
 .PHONY: bring-advanced
 bring-advanced: clear

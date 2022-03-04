@@ -5,8 +5,8 @@ script_dir="$(dirname "$0")"
 to_run_sh="csv2yaml.sh"
 
 yours="${script_dir}/../yours/bin/${to_run_sh}"
-example="${script_dir}/../example/bin/${to_run_sh}"
+default="${script_dir}/../default/bin/${to_run_sh}"
 
 test -f "${yours}" && ${yours} "$1" && exit 0
 
-"${example}" "$1"
+"${default}" "$1"

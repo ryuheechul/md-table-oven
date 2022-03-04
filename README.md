@@ -15,7 +15,7 @@ This repository itself is not a tool in a traditional sense.
 It's rather a starting point or a crafting room if you will.
 
 ## Tools
-> these are what [example](./example) use and you can use any other tool that suits your needs actually.
+> these are what [default](./default) use and you can use any other tool that suits your needs actually.
 
 - [dasel](https://github.com/TomWright/dasel)
 - [jq](https://stedolan.github.io/jq/)
