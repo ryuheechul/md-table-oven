@@ -9,4 +9,4 @@ bring-advanced: clear
 .PHONY: clear
 clear:
 	rm -rf bin.bak
-	mv bin bin.bak || true
+	test -d bin && mv bin bin.bak || true
