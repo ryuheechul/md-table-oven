@@ -9,11 +9,12 @@ extension="${filename##*.}"
 view="cat"
 
 # default to bat if bat exists
-command -v bat > /dev/null  && view="bat"
+command -v bat > /dev/null && view="bat"
 
-# use glow for markdown
-test "${extension}" == "md" && \
-	command -v glow > /dev/null \
+# cat and use glow for markdown
+test "${extension}" == "md" \
+	&& command -v glow > /dev/null \
+	&& ${view} "${file}" \
 	&& view="glow -s light"
 
 # print using decided binary

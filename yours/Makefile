@@ -1,4 +1,12 @@
 .PHONY: touch
-touch:
+touch: clear
+	cp -r -L ../example/bin bin
+
+.PHONY: bring-advanced
+bring-advanced: clear
+	cp -r -L ../advanced-example/bin bin
+
+.PHONY: clear
+clear:
+	rm -rf bin.bak
 	mv bin bin.bak || true
-	cp -r ../example/bin bin
