@@ -1,5 +1,5 @@
 # change here if you want different filenames
-filename = out/data
+filename = table/data
 csv-filename = $(filename).csv
 yaml-filename = $(filename).yaml
 md-filename = $(filename).md

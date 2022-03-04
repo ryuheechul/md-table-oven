@@ -39,7 +39,7 @@ make csv2md
 make md2csv
 ```
 
-These commands not only print results but also it saves to files in `out/` (by default)
+These commands not only print results but also it saves to files in `table/` (by default)
 
 ## Customize
 [Visit here and follow instructions there](./yours/README.md#start-crafting)
