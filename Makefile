@@ -68,3 +68,10 @@ csv2md: csv2yaml yaml2md
 .PHONY: md2csv
 md2csv: md2yaml yaml2csv
 
+# a bonus feature - use cases below
+# - `cat my-table.md` | make format > formatted.md`
+# - `cat my-table.md` | make format | less`
+# - `pbpaste` | make format | pbcopy`
+.PHONY: format
+format:
+	parse-markdown-table | md-table
